@@ -28,13 +28,14 @@ class RecordsController < ApplicationController
 
     respond_to do |format|
       if @record.save
-        format.html { redirect_to @record, notice: 'Record was successfully created.' }
+        format.html { redirect_to new_record_path, notice: 'Registered Successfully' }
         format.json { render :show, status: :created, location: @record }
       else
         format.html { render :new }
         format.json { render json: @record.errors, status: :unprocessable_entity }
       end
     end
+    # redirect_to new_record_path
   end
 
   # PATCH/PUT /records/1
