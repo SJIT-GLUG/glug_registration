@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GlugRegitration</title>
+  <!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Fertigo"> -->
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<container>
+<div class="col-md-2">
+  <%= image_tag "clglogo.png", size: '150x150' %>
+</div>
+<div class="col-md-8">
+  <center><h2>St. Joseph's Institute of Technology</h2><br>
+  <h3>GNU/Linux Users Group</h3></center>
+</div>
+<div class="col-md-2">
+  <%= image_tag "test.png", size: '150x150' %>
+</div>
+</container>
+<!-- <center> -->
+<%= yield %>
+<!-- </center> -->
+</body>
+</html>

@@ -1,0 +1,41 @@
+<%= form_for(@record) do |f| %>
+  <% if @record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@record.errors.count, "error") %> prohibited this record from being saved:</h2>
+
+      <ul>
+      <% @record.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name,"Student Name" %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email,"E-mail Id" %><br>
+    <%= f.email_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :department,"Department" %><br>
+    <%= f.select :department,options_for_select(Record.departments.map{|x| [x[0], x[0]]}) %>
+  </div>
+  <div class="field">
+    <%= f.label :year,"Year" %><br>
+    <%= f.select :year,options_for_select(Record.years.map{|x| [x[0], x[0]]}) %>
+  </div>
+  <div class="field">
+    <%= f.label :roll_no,"Roll No." %><br>
+    <%= f.text_field :roll_no %>
+  </div>
+  <div class="field">
+    <%= f.label :register_no,"Register No." %><br>
+    <%= f.text_field :register_no %>
+  </div>
+  <div class="actions">
+    <%= f.submit :Register %>
+  </div>
+<% end %>
