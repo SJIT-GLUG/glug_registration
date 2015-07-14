@@ -28,7 +28,7 @@ class RecordsController < ApplicationController
 
     respond_to do |format|
       if @record.save
-        format.html { redirect_to new_record_path, notice: 'Registered Successfully' }
+        format.html { redirect_to root_path, notice: 'Registered Successfully' }
         format.json { render :show, status: :created, location: @record }
       else
         format.html { render :new }
