@@ -36,7 +36,7 @@
     <%= f.text_field :register_no %>
   </div>
   <div class="field">
-    <%= f.label :transport,"I am an " %><br>
+    <%= f.label :transport,"I am a " %><br>
     <%= f.select :transport,options_for_select(Record.transports.map{|x| [x[0], x[0]]}) %>
   </div>
   <div class="actions">
