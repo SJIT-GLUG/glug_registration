@@ -11,6 +11,7 @@
       <th>Year</th>
       <th>Roll no</th>
       <th>Register no</th>
+      <th>H or D</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,6 +25,7 @@
         <td><%= record.year %></td>
         <td><%= record.roll_no %></td>
         <td><%= record.register_no %></td>
+        <td><%= record.transport %></td>
         <td><%= link_to 'Show', record %></td>
         <td><%= link_to 'Edit', edit_record_path(record) %></td>
         <td><%= link_to 'Destroy', record, method: :delete, data: { confirm: 'Are you sure?' } %></td>

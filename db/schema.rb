@@ -11,10 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150714163005) do
+ActiveRecord::Schema.define(version: 20150715111920) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "add_transport_to_records", force: :cascade do |t|
+    t.integer  "transport"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "records", force: :cascade do |t|
     t.string   "name"
@@ -25,6 +31,7 @@ ActiveRecord::Schema.define(version: 20150714163005) do
     t.string   "register_no"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "transport"
   end
 
   add_index "records", ["email"], name: "index_records_on_email", unique: true, using: :btree
