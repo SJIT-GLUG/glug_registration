@@ -4,7 +4,8 @@
 Total Count: <%= Record.count %><br>
 Individual Count <% a = Record.group(:department).count %>
 CSE: <%= a[0] %>
-IT: <%= a[1] %>
+IT: <%= a[1] %><br>
+<%= link_to "Export", records_path(format: "xlsx") %>
 <table class="table">
   <thead>
     <tr>

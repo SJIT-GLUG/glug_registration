@@ -1,0 +1,7 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "Records") do |sheet|
+  sheet.add_row [ "Register Number","Name","Department","Year","Email id","H or D","Roll Number"] ## Header values of Excel
+  @records.each do |record|
+    sheet.add_row [record.register_no,record.name,record.department,record.year,record.email,record.transport,record.roll_no]
+  end
+end
